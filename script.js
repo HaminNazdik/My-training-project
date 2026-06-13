@@ -5,3 +5,13 @@ function searchProduct() {
 
     alert("Selected language: " + language);
 }
+function getLocation() {
+    navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+function showPosition(position) {
+    alert(
+        "Latitude: " + position.coords.latitude +
+        "\nLongitude: " + position.coords.longitude
+    );
+}
